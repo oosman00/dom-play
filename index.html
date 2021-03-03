@@ -1,1 +1,98 @@
-<h1> DOM Play assignment goes here </h1>
+<html>
+<head>
+    <title>DOM Play</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        #clickSpans span{
+            background.color:aqua;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container"style="padding-top: 5px;">
+    <h1> Dom Play</h1>
+    <br>
+    <h2> Jojo's Bizzare Adventure</h2>
+    <br>
+    <div id="clickSpans">
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: MUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA!!!!!</span></p>
+        <p><span data-actor="Diavolo">Diavolo: GBRRRLGH!-</span></p>
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem:You won't be heading...anywhere.</span></p>
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: In fact, you'll never arrive to the truth that will occur, no matter what!!</span></p>
+        <p><span data-actor="King Crimson">King Crimson:YOU GODDAMN KID!!</span></p>
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: MUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDAMUDA!!!!!</span></p>
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: MUDAAAAAAAAAAAA!!!!!!!!-</span></p>
+        <p><span data-actor="Diavolo">Diavolo:DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGH!!!!!!!</span></p>
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: This is what... ..is.</span></p>
+        <p><span data-actor="Diavolo">Diavolo:-!!</span></p>
+        Gold Experience Requiem: What you see is indeed the truth.
+
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: Your ability indeed sees the actions that we will actually perform.
+
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: However...
+
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem:You will never reach the truth that will occur, no matter what.
+
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: None who stand before me shall ever do so, no matter what abilities they may wield!
+
+        <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem:  his is...Gold Experience Requiem!
+
+         <p><span data-actor="Gold Experience Requiem">Gold Experience Requiem: Not even my master, Giorno Giovanna, knows of this. 
+        <br>
+        <br>
+        <br>
+        <br>
+       <a href="https://transcripts.fandom.com/wiki/King_Of_Kings">Jojo Bizzare Adventuure: Golden wind script</a>
+       <br>
+       <br>
+    </div>
+    </div>
+    <script>
+        // spans is var so data is global
+        var spans = document.querySelectorAll(" #clickSpans span");
+        
+       // console.log(spans);
+       
+       for(const mySpan of spans){
+
+            mySpan.addEventListener("click",function(event){
+              
+                highlightActor(mySpan.dataset.actor);
+           
+
+            });
+
+
+        }
+        
+            function highlightActor(myActor){
+
+                
+            // alert("hello from highlightActor: " + myActor);
+                
+            for(const mySpan of spans){
+                    if(mySpan.dataset.actor.includes(myActor)){ //current actor, highlight
+                    mySpan.style.backgroundColor = 'yellow';
+                    mySpan.style.fontWeight = 'bold';
+                }
+                else{
+                    mySpan.style.backgroundColor = 'lightgray'; // not current actor, no highlight
+                    mySpan.style.fontWeight = 'normal';
+                    } 
+                }
+            }
+                
+                /*
+                if( el.style.backgroundColor == 'yellow'){//yellow background, turn  to white
+                    el.style.backgroundColor = 'white';
+                }else{//not yellow, so turn to yellow
+                el.style.backgroundColor = 'yellow';
+
+                }
+            }
+           */
+    </script>
+</body>
+
+</html>
